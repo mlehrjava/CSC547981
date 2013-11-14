@@ -2,7 +2,7 @@
   Dr. Mark E. Lehr
   November 14th, 2013
   Soon to have vectors
-  maybe later than sooner
+  maybe later than sooner or not
 */
 
 //Libraries
