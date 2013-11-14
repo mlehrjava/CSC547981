@@ -1,8 +1,6 @@
 /*
   Dr. Mark E. Lehr
-  November 14th, 2013
-  Soon to have vectors
-  perhaps
+  November 11th, 2013
 */
 
 //Libraries
