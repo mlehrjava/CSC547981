@@ -1,5 +1,5 @@
 /*
-  Dr. Mark E. Lehr IS OLD
+  Dr. Mark E. Lehr
   November 11th, 2013
 */
 
