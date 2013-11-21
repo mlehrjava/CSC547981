@@ -17,8 +17,8 @@ void filArry(int [],int [],int);
 void prntAry(int [],int,int);
 void prntAry(int [],int [],int,int);
 void swap(int &,int &);
-void sortPos(int [],int,int);
-void markSort(int [],int);
+void sortPos(int [],int [],int,int);
+void markSort(int [],int [],int);
 
 int main(int argc, char *argv[]){
     //Declare variables and initialize the
@@ -33,23 +33,25 @@ int main(int argc, char *argv[]){
     prntAry(indx,SIZE,10);
     prntAry(array,indx,SIZE,10);
     //Sort the array
-    //markSort(acopy,SIZE);
+    markSort(array,indx,SIZE);
     //Print the sorted array
-    //prntAry(acopy,SIZE,10);
+    prntAry(array,SIZE,10);
+    prntAry(indx,SIZE,10);
+    prntAry(array,indx,SIZE,10);
     //Exit stage right
     return EXIT_SUCCESS;
 }
 
-void markSort(int a[],int n){
+void markSort(int a[],int indx[],int n){
      for(int i=0;i<n-1;i++){
-          sortPos(a,n,i);
+          sortPos(a,indx,n,i);
      }
 }
 
-void sortPos(int a[],int n,int pos){
+void sortPos(int a[],int indx[],int n,int pos){
      if(pos>n-1)return;
      for(int i=pos+1;i<n;i++){
-          if(a[pos]>a[i])swap(a[pos],a[i]);
+          if(a[indx[pos]]>a[indx[i]])swap(indx[pos],indx[i]);
      }
 }
 
