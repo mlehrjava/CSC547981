@@ -1,6 +1,6 @@
 /*
   Dr. Mark E. Lehr
-  November 11th, 2013
+  November 18th, 2013
 */
 
 //Libraries
@@ -12,13 +12,13 @@ using namespace std;
 //No Global Constants
 
 //Function Prototypes
-void fillAry(int [],int);
-void prntAry(int [],int,int);
-int  find(int [],int,int,int);
-void shift(int [],int,int,int);
-int  szOf(int [],int,int);
-int  delVal(int [],int,int,int);
-int  replce(int [],int,int,int);
+void fillAry(int *,int);
+void prntAry(int *,int,int);
+int  find(int *,int,int,int);
+void shift(int *,int,int,int);
+int  szOf(int *,int,int);
+int  delVal(int *,int,int,int);
+int  replce(int *,int,int,int);
 
 int main(int argc, char *argv[]){
     //Declare and initialize variables
@@ -41,12 +41,12 @@ int main(int argc, char *argv[]){
         <<" times and replace it with 30"<<endl;
     //Print the Array
     prntAry(array,SIZE,10);
+    
     //Exit stage Right
-    system("PAUSE");
-    return EXIT_SUCCESS;
+    return 0;
 }
 
-int  replce(int a[],int n,int vf,int vr){
+int  replce(int *a,int n,int vf,int vr){
      //Count how many replaced
      int cnt=0;
      for(int i=0;i<n;i++){
@@ -58,7 +58,7 @@ int  replce(int a[],int n,int vf,int vr){
      return cnt;
 }
 
-int  delVal(int a[],int n,int value,int vInsrt){
+int  delVal(int *a,int n,int value,int vInsrt){
     //Find and delete
     int posFnd=0;
     do{ 
@@ -70,14 +70,14 @@ int  delVal(int a[],int n,int value,int vInsrt){
     return szOf(a,n,vInsrt);
 }
 
-int  szOf(int a[],int n,int value){
+int  szOf(int *a,int n,int value){
      for(int i=0;i<n;i++){
           if(a[i]==value)return i;
      }
      return n;
 }
 
-void shift(int a[],int pos,int end,int value){
+void shift(int *a,int pos,int end,int value){
      //Delete the position
      for(int i=pos;i<end-1;i++){
              a[i]=a[i+1];
@@ -86,7 +86,7 @@ void shift(int a[],int pos,int end,int value){
      a[end-1]=value;
 }
 
-int  find(int a[],int strt,int end,int value){
+int  find(int *a,int strt,int end,int value){
      //Try to find the value
      for(int i=strt;i<=end;i++){
              if(a[i]==value) return i;
@@ -95,7 +95,7 @@ int  find(int a[],int strt,int end,int value){
      return -1;
 }
 
-void prntAry(int a[],int n,int perLine){
+void prntAry(int *a,int n,int perLine){
      cout<<endl;
      for(int i=0;i<n;i++){
           cout<<a[i]<<" ";
@@ -106,7 +106,7 @@ void prntAry(int a[],int n,int perLine){
 
 //Randomly fill an array with 2
 //digit numbers
-void fillAry(int a[],int n){
+void fillAry(int *a,int n){
      //Loop and fill the array
      for(int i=0;i<n;i++){
              a[i]=rand()%90+10;
