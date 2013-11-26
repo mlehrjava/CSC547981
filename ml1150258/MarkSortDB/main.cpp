@@ -1,7 +1,7 @@
 /*
-Dr. Mark E. Lehr
-November 19th, 2013
-Sorting Functions
+  Dr. Mark E. Lehr
+  November 25th, 2013
+  Sorting Functions
 */
 
 //Libraries
@@ -39,6 +39,7 @@ int main(int argc, char *argv[]){
     prntAry(indx,SIZE,10);
     prntAry(array,indx,SIZE,10);
     //Exit stage right
+    system("PAUSE");
     return EXIT_SUCCESS;
 }
 
@@ -55,26 +56,25 @@ void sortPos(int a[],int indx[],int n,int pos){
      }
 }
 
-
 void swap(int &a,int &b){
      int temp=a;
      a=b;
      b=temp;
 }
 
-void prntAry(int a[],int indx[],int n,int perLine){
+void prntAry(int a[],int n,int perLine){
      cout<<endl;
      for(int i=0;i<n;i++){
-          cout<<a[indx[i]]<<" ";
+          cout<<a[i]<<" ";
           if(i%perLine==(perLine-1))cout<<endl;
      }
      cout<<endl;
 }
 
-void prntAry(int a[],int n,int perLine){
+void prntAry(int a[],int indx[],int n,int perLine){
      cout<<endl;
      for(int i=0;i<n;i++){
-          cout<<a[i]<<" ";
+          cout<<a[indx[i]]<<" ";
           if(i%perLine==(perLine-1))cout<<endl;
      }
      cout<<endl;
