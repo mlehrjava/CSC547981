@@ -1,0 +1,6 @@
+In this program, you are an admissions counselor at a public research
+university and you're determining whether the top three undergraduate students
+have a chance of getting into the college's prestigious 
+Computer Science PhD program. You will make this decision
+for each prospective student based on the academic statistics
+from last year's entering class.
